@@ -1,0 +1,44 @@
+.userprofile-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.userprofile-profilepic {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 100px;
+  border: 0.5rem solid white;
+  margin-top: 2rem;
+  margin-top: 6rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.userprofile-username,
+.userprofile-email {
+  background: rgb(219, 219, 219);
+  min-width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 0.3rem 1.4rem;
+  margin: 1rem auto;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.622);
+  color: rgb(36, 36, 36);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #eee;
+  font-size: 2rem;
+}
+
+.userprofile-editlink {
+  color: rgb(218, 218, 218);
+  float: right;
+  transition: color 0.2s;
+  &:hover {
+    color: rgb(245, 245, 245);
+  }
+}
+
+.userprofile-privateconvolink {
+  color: #eee;
+}

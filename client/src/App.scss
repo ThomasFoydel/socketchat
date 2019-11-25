@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Nanum Gothic', san-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  box-sizing: border-box;
+  // background: rgb(245, 245, 245);
+  // background: rgb(58, 58, 58);
+  // background: rgb(51, 35, 35);
+  background: rgb(197, 197, 197);
+  position: absolute;
+  top: 0;
+  margin-top: 0;
+}
+
+button:focus,
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.hover-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.App {
+  width: 100vw;
+  max-height: 100vh;
+  position: absolute;
+}

@@ -1,0 +1,32 @@
+.portfolio-link {
+  width: 70%;
+  min-width: 46.6rem !important;
+  background: #3a3a3a;
+  color: rgb(238, 238, 238);
+  cursor: default;
+  a {
+    color: white;
+    cursor: pointer;
+    transition: color 0.25s cubic-bezier(0.47, 0, 0.745, 0.715);
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.chat-maincontainer {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 3rem;
+  width: 95vw;
+  box-shadow: 2rem 2rem 3rem rgba(7, 7, 7, 0.582);
+  background: rgb(58, 58, 58);
+}
+
+.chat-backgroundcontainer {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: rgb(43, 43, 43);
+  clip-path: polygon(0 0, 75% 0, 55% 100%, 0 100%);
+}

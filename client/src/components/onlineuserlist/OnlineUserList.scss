@@ -1,0 +1,66 @@
+.individualonlineuser {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 0.2rem;
+  width: 5rem;
+  margin: 0.2rem;
+}
+
+.individualonlineuser-username {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.individualonlineuser-image {
+  width: 100%;
+  height: 100%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.onlineuserlist-container {
+  display: flex;
+}
+
+.onlineuserlist-title {
+  cursor: default;
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 5rem;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  font-size: 1.2rem;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  transform: rotateY(180deg);
+  padding-top: 0.4rem;
+}

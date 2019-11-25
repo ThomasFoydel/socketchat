@@ -1,0 +1,66 @@
+.register-container {
+  margin-top: 10rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.register-input {
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem;
+  background: rgba(238, 238, 238, 0.253);
+  caret-color: white;
+  &::placeholder {
+    color: white;
+  }
+}
+
+.login-input-container {
+}
+
+.register-submitbutton {
+  background: #eee;
+  color: #222;
+  border-radius: 0.1rem;
+  width: 30%;
+  min-width: 5rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%) translateY(0);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+  &:hover {
+    background: #222;
+    color: #eee;
+    transform: translateX(-50%) translateY(-0.2rem);
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(17, 17, 17, 0.575);
+  }
+}
+
+.register-input-item {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    // border: 1px solid green;
+    -webkit-text-fill-color: #eee;
+    -webkit-box-shadow: 0 0 0px 100rem rgba(238, 238, 238, 0.253) inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.register-passwordsnotmatch {
+  border: 1px solid red;
+  padding: 0.6rem;
+}
+
+.register-errormessage {
+  color: red;
+}

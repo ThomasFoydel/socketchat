@@ -1,0 +1,85 @@
+.chatform-container {
+  // background: rgb(182, 67, 192);
+  background: black;
+  height: 10rem;
+  // min-width: 70% !important;
+  min-width: 46.6rem;
+}
+
+.chatform-innercontainer {
+  display: flex;
+  padding-top: 3rem;
+  margin-left: 55%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.chatform-textinput {
+  border-radius: 0.2rem;
+  width: 100%;
+  border: none;
+  font-size: 1.7rem;
+}
+
+.chatform-submitbutton {
+  min-width: 6rem;
+  max-width: 6rem;
+  height: 3.5rem;
+  // border: 1px solid rgb(106, 56, 224);
+  border: 1px solid rgb(238, 238, 238);
+  // background: rgb(182, 110, 189);
+  background: rgb(184, 184, 184);
+  //   #55fd8d;
+  // color: white;
+  color: black;
+  border-radius: 0.2rem;
+  margin-left: 1rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  transition: color 0.4s, background 0.4s, border 0.4s;
+
+  &:hover {
+    cursor: pointer;
+    // color: rgb(182, 67, 192);
+    color: white;
+    // background: white;
+    // background: rgb(53, 53, 53);
+    background: rgb(146, 11, 11);
+    border: 1px solid rgba(243, 243, 243, 0.158);
+  }
+}
+
+.chatform-fileinput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.chatform-fileinput + label {
+  // min-width: 14.4rem;
+  color: rgb(7, 9, 24);
+  background: rgb(207, 207, 207);
+  margin-top: 0.1rem;
+  height: 3.4rem;
+  display: inline-block;
+  padding: 0.58rem 1.4rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+  transition: color 0.2s, background 0.2s;
+  cursor: pointer;
+  width: 100%;
+  // position: absolute;
+  // right: 0;
+}
+
+.chatform-selectedfiletrue {
+  background: rgb(218, 14, 14) !important;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgb(221, 92, 92) !important;
+  }
+}

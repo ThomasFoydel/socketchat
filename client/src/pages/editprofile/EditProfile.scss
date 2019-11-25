@@ -1,0 +1,138 @@
+$break-large: 962px;
+
+.editprofile-container input {
+  display: block;
+}
+
+.editprofile-profilepic {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 100px;
+  border: 0.5rem solid white;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.editprofile-noprofilepic {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 100px;
+  border: 0.5rem solid white;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.editprofile-profilepictext {
+  top: 4.5rem;
+  left: 0.4rem;
+  position: absolute;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  color: rgba(255, 255, 255, 0.932);
+}
+
+.editprofile-profilepiccontainer {
+  height: 17rem;
+  width: 17rem;
+  border-radius: 999px;
+  background: rgb(22, 22, 22);
+  color: white;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5rem;
+
+  .editprofile-profilepictext {
+    opacity: 0;
+    transition: opacity 1.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+  &:hover {
+    .editprofile-profilepictext {
+      opacity: 1;
+    }
+  }
+}
+
+.editprofile-button {
+  font-weight: 700;
+  min-width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 0.6rem 0;
+  margin: 0.4rem auto;
+  color: rgb(36, 36, 36);
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.editopenform {
+  display: flex;
+  margin: 0.5rem 0;
+  width: 100%;
+  justify-content: space-between;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2px;
+
+  @media screen and (max-width: $break-large) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.editopenform input {
+  height: 3rem;
+  margin: 0 0.4rem;
+  min-width: 8rem;
+  width: 28%;
+  border-radius: 0.1rem;
+  border: rgba(0, 0, 0, 0);
+  padding: 0.4rem;
+
+  @media screen and (max-width: $break-large) {
+    min-width: 10rem;
+    margin: 0 auto;
+  }
+}
+
+.editprofile-buttonbox {
+  margin-top: 1rem;
+}
+
+.editprofileformcontainer {
+  width: 70%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-bottom: 0.5rem;
+  min-height: 3.9rem;
+
+  @media screen and (max-width: $break-large) {
+    margin-top: 2rem;
+  }
+}
+
+.editprofile-animatedformcontainer {
+  width: 50%;
+  height: 4.5rem;
+  margin-left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: rgba(168, 0, 0, 0);
+  @media screen and (max-width: $break-large) {
+    margin-bottom: 2rem;
+  }
+}
+
+.editprofile-animatedform {
+  cursor: pointer;
+  margin: 1.4rem 0;
+}
+
+.editprofile-openform {
+  margin-top: 1.4rem;
+}
