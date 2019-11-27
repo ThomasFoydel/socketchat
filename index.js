@@ -138,16 +138,17 @@ app.post('/register', async (req, res) => {
 
   const hashedPW = await bcrypt.hash(req.body.password, 12);
 
-  // TODO: check for existing users and return error if already exists
-  const alreadyExistingEmailUser = User.find({ email: req.body.email });
+  const alreadyExistingEmailUser = await User.findOne({
+    email: req.body.email
+  });
   if (alreadyExistingEmailUser) {
-    return res.json({ err: 'User already with this email exists' });
+    return res.json({ err: 'User with this email already exists' });
   }
-  const alreadyExistingUsernameUser = User.find({
+  const alreadyExistingUsernameUser = await User.findOne({
     username: req.body.username
   });
   if (alreadyExistingUsernameUser) {
-    return res.json({ err: 'User already with this username exists' });
+    return res.json({ err: 'User with this username already exists' });
   }
 
   const newUser = new User({
