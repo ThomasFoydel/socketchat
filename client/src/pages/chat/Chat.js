@@ -17,7 +17,7 @@ const Chat = () => {
 
   if (appState.userId) {
     socket = io(
-      `?profilePicUrl=${appState.profilePicUrl}&username=${appState.username}&userId=${appState.userId}`
+      `http://localhost:8000?profilePicUrl=${appState.profilePicUrl}&username=${appState.username}&userId=${appState.userId}`
     );
     socket.emit('updateAndSendOnlineUsers');
   }

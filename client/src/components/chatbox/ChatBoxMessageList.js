@@ -79,12 +79,13 @@ const ChatBoxMessageList = ({ socket }) => {
 
   useEffect(() => {
     if (newestSocketMessage) {
+      scrollToBottom();
       setMessagesArray(existingMessages => [
         ...existingMessages,
         newestSocketMessage
       ]);
+
       setSocketMessageOffset(existingOffset => existingOffset + 1);
-      scrollToBottom();
       setTimeout(() => {
         scrollToBottom();
       }, 1000);
