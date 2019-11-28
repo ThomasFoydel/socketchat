@@ -84,9 +84,10 @@ const ChatBoxMessageList = ({ socket }) => {
         newestSocketMessage
       ]);
       setSocketMessageOffset(existingOffset => existingOffset + 1);
+      scrollToBottom();
       setTimeout(() => {
         scrollToBottom();
-      }, 5);
+      }, 1000);
     }
   }, [newestSocketMessage]);
 
@@ -110,7 +111,7 @@ const ChatBoxMessageList = ({ socket }) => {
     }
     setTimeout(() => {
       scrollToBottom();
-    }, 20);
+    }, 1000);
 
     return () => {
       isSubscribed = false;

@@ -25,6 +25,7 @@ const PrivateConvo = ({ match, socket }) => {
           1}&offset=${socketMessageOffset}`,
         { headers: { 'x-auth-token': localStorage.getItem('token') } }
       );
+
       if (loadedMessages.data.length === count) {
         setFoundMessages([...loadedMessages.data, ...foundMessages]);
       } else {
@@ -32,6 +33,8 @@ const PrivateConvo = ({ match, socket }) => {
         setMoreMessagesExist(false);
       }
       setStart(start + 1);
+    } else {
+      setMoreMessagesExist(false);
     }
   };
 
@@ -42,9 +45,11 @@ const PrivateConvo = ({ match, socket }) => {
   };
 
   useEffect(() => {
+    let isSubscribed = true;
+
     const findUser = async () => {
       const returnedUser = await Axios.get(`/user/${friendId}`);
-      if (returnedUser) {
+      if (returnedUser && isSubscribed) {
         setFoundUser(returnedUser.data);
       }
     };
@@ -54,12 +59,17 @@ const PrivateConvo = ({ match, socket }) => {
       const foundMessages = await Axios.get(
         `/privateconvo?userid=${appState.userId}&friendid=${friendId}`
       );
-      if (foundMessages.data) {
+      // console.log('found messages: ', foundMessages.data.length);
+      if (foundMessages.data.length > 0 && isSubscribed) {
         setFoundMessages(foundMessages.data);
         scrollToBottom();
+      } else {
+        setMoreMessagesExist(false);
       }
     };
     loadPrivateMessages();
+
+    return () => (isSubscribed = false);
   }, [friendId, appState.userId]);
 
   useEffect(() => {
@@ -115,9 +125,11 @@ const PrivateConvo = ({ match, socket }) => {
 
   return (
     <div>
-      <div className='chatbox-loadmorebutton' onClick={privateLoadMore}>
-        load more
-      </div>
+      {moreMessagesExist && (
+        <div className='chatbox-loadmorebutton' onClick={privateLoadMore}>
+          load more
+        </div>
+      )}
       {foundMessages.map(message => {
         if (message._id) {
           return (
