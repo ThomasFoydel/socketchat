@@ -50,8 +50,8 @@
 }
 
 .individualmessage-hasimagetrue {
-  min-height: 22rem !important;
-  max-height: 22rem !important;
+  min-height: 45rem !important;
+  max-height: 45rem !important;
   overflow: hidden !important;
 }
 
@@ -100,8 +100,9 @@
 
 .individualmessage-image {
   max-width: 100%;
-  min-height: 18rem;
-  max-height: 18rem;
+  min-height: 38rem;
+  max-height: 38rem;
+  margin-top: 2rem;
   margin-left: 50%;
   transform: translateX(-50%);
   border-radius: 0.1rem;
