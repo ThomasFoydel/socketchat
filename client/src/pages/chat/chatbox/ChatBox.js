@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatBoxMessageList from 'components/chatbox/ChatBoxMessageList';
+import ChatBoxMessageList from 'pages/chat/chatbox/ChatBoxMessageList';
 import EditProfile from 'pages/editprofile/EditProfile';
 import UserProfile from 'pages/userprofile/UserProfile';
 import Login from 'pages/login/Login';

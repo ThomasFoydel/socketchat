@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import RoomList from 'components/roomlist/RoomList';
-import ChatBox from 'components/chatbox/ChatBox';
+import ChatBox from 'pages/chat/chatbox/ChatBox';
 import ChatForm from 'components/chatform/ChatForm';
 import io from 'socket.io-client';
 import Axios from 'axios';
@@ -17,7 +17,7 @@ const Chat = () => {
 
   if (appState.userId) {
     socket = io(
-      `?profilePicUrl=${appState.profilePicUrl}&username=${appState.username}&userId=${appState.userId}`
+      `http://localhost:8000?profilePicUrl=${appState.profilePicUrl}&username=${appState.username}&userId=${appState.userId}`
     );
     socket.emit('updateAndSendOnlineUsers');
   }

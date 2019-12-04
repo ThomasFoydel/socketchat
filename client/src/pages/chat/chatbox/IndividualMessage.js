@@ -15,7 +15,7 @@ const IndividualMessage = ({ content, author, authorId, imageFile }) => {
   useEffect(() => {
     let isSubscribed = true;
     const fetchProfilePic = async () => {
-      const foundAuthor = await Axios.get(`/user/${authorId}`);
+      const foundAuthor = await Axios.get(`/userinfo/${authorId}`);
       if (isSubscribed && foundAuthor.data.profilePicUrl) {
         setAuthorProfilePic(foundAuthor.data.profilePicUrl);
       }

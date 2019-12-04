@@ -48,7 +48,7 @@ const PrivateConvo = ({ match, socket }) => {
     let isSubscribed = true;
 
     const findUser = async () => {
-      const returnedUser = await Axios.get(`/user/${friendId}`);
+      const returnedUser = await Axios.get(`/userinfo/${friendId}`);
       if (returnedUser && isSubscribed) {
         setFoundUser(returnedUser.data);
       }

@@ -254,7 +254,7 @@ app.post('/editprofile/:type', auth, async (req, res) => {
   });
 });
 
-app.get('/user/:id', async (req, res) => {
+app.get('/userinfo/:id', async (req, res) => {
   const { id } = req.params;
   if (id) {
     const foundUser = await User.findById(id);

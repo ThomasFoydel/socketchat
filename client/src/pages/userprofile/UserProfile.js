@@ -13,7 +13,7 @@ const UserProfile = ({ match }) => {
   useEffect(() => {
     let isSubscribed = true;
     const fetchUserInfo = async () => {
-      const foundUser = await Axios.get(`/user/${match.params.id}`);
+      const foundUser = await Axios.get(`/userinfo/${match.params.id}`);
       if (isSubscribed) {
         setUserInfo(foundUser.data);
       }

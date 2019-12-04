@@ -125,6 +125,13 @@ const ChatBoxMessageList = ({ socket }) => {
     }, 100);
   }, [initialMessagesLoaded]);
 
+  useEffect(() => {
+    updateState({
+      type: 'CHANGE_CURRENT_PRIVATE_FRIEND',
+      payload: { currentPrivateFriend: '' }
+    });
+  }, [updateState]);
+
   return (
     <div>
       <div className='chatbox-messagearea'>

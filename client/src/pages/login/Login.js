@@ -83,6 +83,21 @@ const Login = () => {
         <div className='login-submitbutton' onClick={handleSubmit}>
           submit
         </div>
+        <p
+          style={{
+            color: '#eee',
+            fontSize: '1rem',
+            marginTop: '.8rem',
+            marginLeft: '50%',
+            transform: 'translateX(-50%)',
+            lineHeight: '1.2rem',
+            textAlign: 'center',
+            minWidth: '22.4rem'
+          }}
+        >
+          for testing: <br />
+          email: address@gmail.com, password: password
+        </p>
         {errorMessage && <h5 style={{ color: 'red' }}>{errorMessage}</h5>}
       </div>
     </div>

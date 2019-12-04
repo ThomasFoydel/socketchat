@@ -26,7 +26,7 @@ const EditProfile = () => {
   useEffect(() => {
     let isSubscribed = true;
     const fetchProfilePic = async () => {
-      const foundUser = await Axios.get(`/user/${appState.userId}`);
+      const foundUser = await Axios.get(`/userinfo/${appState.userId}`);
       if (isSubscribed) {
         setUserInfo(foundUser.data);
       }

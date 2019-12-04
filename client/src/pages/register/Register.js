@@ -54,7 +54,6 @@ const Register = () => {
   };
 
   const handleSubmit = async () => {
-    // const registeredUser = await
     Axios.post('/register', {
       email: emailValue,
       username: usernameValue,
