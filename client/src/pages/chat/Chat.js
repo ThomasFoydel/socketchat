@@ -87,7 +87,7 @@ const Chat = () => {
           <b>Chat</b> - Thomas Foydel 2019{' '}
           <b>
             <a
-              href='http://thomasfoydel.com'
+              href='https://thomasfoydel.com'
               target='_blank'
               rel='noopener noreferrer'
             >
